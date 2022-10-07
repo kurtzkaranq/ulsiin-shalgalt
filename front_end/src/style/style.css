@@ -80,6 +80,8 @@ body{
   .input{
 
       position: block;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      
   }
   .lists{
     flex-direction: column;
@@ -101,6 +103,7 @@ body{
     margin-top: 15px;
     transform: scale(2); 
 }
-.listComp{
-    /* margin-right: 25%; */
+span{
+    font-weight: 300;
+    margin-left: 50px;
 }

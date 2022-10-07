@@ -5,12 +5,12 @@ import axios from 'axios'
 import { BsFillTrashFill } from 'react-icons/bs'
 import { AiFillEdit } from 'react-icons/ai'
 
-export default function Lists({ setPost, post }) {
+export default function Lists({ setPost, post, getChecks }) {
     const [data, setData] = useState();
     const [check, setCheck] = useState();
     const [edit, setEdit] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:5005/v1/lists').then(res => {
+        axios.get('https://erxes.ilearn.mn/v1/lists').then(res => {
             setData(res?.data?.lists)
 
         })
@@ -18,7 +18,7 @@ export default function Lists({ setPost, post }) {
     const style = { fontSize: "1.5em", marginLeft: '25px' }
     function deleteHandler(e) {
         console.log(e);
-        axios.delete(`http://localhost:5005/v1/lists/${e._id}`).then(setCheck(!check))
+        axios.delete(`https://erxes.ilearn.mn/v1/lists/${e._id}`).then(setCheck(!check))
     }
 
 
